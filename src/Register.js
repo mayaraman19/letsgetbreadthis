@@ -3,7 +3,6 @@ import './App.css';
 import firebase from './lib/firebase';
 import {useEffect, useState} from 'react';
 import Person from './Person';
-import {Redirect} from 'react-router-dom';
 
 
 class Register extends React.Component{
@@ -13,7 +12,7 @@ class Register extends React.Component{
             name: "",
             school: "",
             age: "",
-            toContacts: false
+            toContacts = false
         };
       }
 
@@ -29,17 +28,9 @@ class Register extends React.Component{
         this.setState({ age: e.target.value });
     }
 
-    handleSubmit = (user) => {
-        this.setState({toContacts: true});
-        // saveUser(user)
-        //     .then(() => this.setState(() => ({
-        //         toContacts: true
-        //     })))
-    }
-
     render = () => {
-        if (this.state.toContacts === true) {
-            return <Redirect to='/users' />
+        if (this.state.toDashboard === true) {
+            return <Redirect to='/dashboard' />
           }
         return (
             <div>
@@ -64,7 +55,7 @@ class Register extends React.Component{
             <br></br>
             <br></br>
             <button 
-            onClick={this.handleSubmit}
+            onClick={this.createMessage}
             >
                 Submit
             </button>
