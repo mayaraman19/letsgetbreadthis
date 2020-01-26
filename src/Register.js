@@ -6,15 +6,17 @@ import Person from './Person';
 
 
 class Register extends React.Component{
-    return (
+    render = () => {
+    return ( 
         <form>
         <h1>Hello</h1>
         <p>Enter your name:</p>
         <input
           type="text"
         />
-      </form>
+        </form>
     );
+    }
 }
 
 export default Register;

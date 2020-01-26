@@ -1,9 +1,8 @@
 import React from 'react';
-import './App.css';
 import firebase from './lib/firebase';
 import {useEffect, useState} from 'react';
 import Person from './Person';
-
+import './App.css';
 
 function App() {
 
@@ -40,11 +39,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <h1 class="rainbow-text">[L]et's [G]et [B]read [T]his</h1>
+      <div class="background-image"></div>
+      <he class="rainbow-text">[L]et's [G]et [B]read [T]his</he>
       <br />
       <br />
       <br />
-      <button onclick="window.location.href = 'Register.js';">Register today!</button>
+      <button onclick="Register()">Register today!</button>
       </header>
       {items.map(item => <Person item={item}/>)}
     </div>
