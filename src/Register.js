@@ -5,8 +5,7 @@ import {useEffect, useState} from 'react';
 import Person from './Person';
 
 
-class Register extends React.Component{
-    render = () => {
+function Register (){
     return ( 
         <form>
         <h1>Hello</h1>
@@ -17,6 +16,5 @@ class Register extends React.Component{
         </form>
     );
     }
-}
-
-export default Register;
+  
+  export default Register;
