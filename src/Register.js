@@ -33,7 +33,8 @@ class Register extends React.Component{
     }
 
     handleYearChange = e => {
-        this.setState({ year: e.target.value});
+      console.log(e);
+        this.setState({ year: e.value});
     }
 
     handlePronounsChange = e => {
@@ -56,6 +57,10 @@ class Register extends React.Component{
 
     }
     render() {
+      const options = [
+        'Freshman', 'Sophomore', 'Junior', 'Senior', 'Other'
+      ];
+      const defaultOption = options[0];
         return (
             <div>
             <p>Name:</p>
@@ -77,11 +82,7 @@ class Register extends React.Component{
                 onChange={this.handleSchoolChange}
             />
             <p>Year:</p>
-            <input
-              type="number"
-              value={this.state.year}
-              onChange={this.handleYearChange}
-            />
+            <Dropdown options={options} onChange={this.handleYearChange} value={this.state.year} placeholder="Select an option" />
             <p>Pronouns</p>
             <input
               type="text"
