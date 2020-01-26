@@ -89,7 +89,7 @@ class Register extends React.Component{
               value={this.state.pronouns}
               onChange={this.handlePronounsChange}
             />
-            <p>Interests</p>
+            <p>Interests (3 at most please!)</p>
             <input
               type="text"
               value={this.state.interests}
