@@ -51,7 +51,9 @@ h1 {
   max-width: 600px;
 }
 button {
-  background-color: #ff7e00;
+  background-image: linear-gradient(to bottom right, #ffaa55, 
+  #ff7e00, #de6f00);
+  border-radius: 25px;
   border: none;
   color: #fff4bf;
   text-align: center;
