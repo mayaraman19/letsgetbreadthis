@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import firebase from './lib/firebase';
 import {useEffect, useState} from 'react';
@@ -41,19 +40,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <a className="button">Sign Up</a>
+      <h1 class="rainbow-text">[L]et's [G]et [B]read [T]his</h1>
+      <br />
+      <br />
+      <br />
+      <button onclick="window.location.href = 'signup.html';">Sign up</button>
+      <br />
+      <button onclick="window.location.href = 'login.html';">Log in</button>
       </header>
       {items.map(item => <Person item={item} blah="1" food="banana" age={item.age}/>)}
     </div>
