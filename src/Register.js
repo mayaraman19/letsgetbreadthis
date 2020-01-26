@@ -6,16 +6,16 @@ import Person from './Person';
 
 
 function Register() {
-    <div>
-        <form>
-        First name:<br>
-        <input type="text" name="firstname"><br>
-        Last name:<br>
-        <input type="text" name="lastname">
-        </form>
-    </div>
+    
     
     return (
-        
-    )
+        <div className = "Register">
+            <form>
+            First name:<br />
+            <input type="text" name="firstname"><br />
+            Last name:<br />
+            <input type="text" name="lastname">
+            </form>
+        </div>
+    );
 }
