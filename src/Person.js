@@ -9,8 +9,11 @@ function Person(props) {
   return (
     <div className="Person">
       <h1>{props.item.name}</h1>
+      <h2>{props.item.age}</h2>
       <h2>{props.item.school}</h2>
-      <h3>{props.item.age}</h3>
+      <h2>{props.item.year}</h2>
+      <h2>{props.item.pronouns}</h2>
+      <h2>{props.item.interests}</h2>
     </div>
   );
 }
