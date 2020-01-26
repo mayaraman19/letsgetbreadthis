@@ -4,8 +4,13 @@ import {useEffect, useState} from 'react';
 import Person from './Person';
 import Register from './Register';
 import App from './App';
+<<<<<<< HEAD
 
 function Users() {
+=======
+function Users() {
+
+>>>>>>> 3010b720932ffb7ac764bcdae8e2746f37a1e4c4
     const [items, setItems] = useState([]);
   
     //componentDidMount

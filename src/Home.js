@@ -46,10 +46,15 @@ function Home() {
         <br />
         <br />
         <a href="/register">Register Today!</a>
+<<<<<<< HEAD
+       </header>
+        </div>
+=======
         {/* <button onClick={() => }"./src/Register.js">Register today!</button> */}
         </header>
         
       </div>
+>>>>>>> 2db5ae5a1a6344cad74b46643b07a38a7d757a54
     );
   }
   
