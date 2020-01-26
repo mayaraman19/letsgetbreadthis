@@ -1,4 +1,6 @@
 import React from 'react';
+import Dropdown from 'react-dropdown'
+import 'react-dropdown/style.css'
 import './App.css';
 import firebase from './lib/firebase';
 import {useEffect, useState} from 'react';
@@ -14,7 +16,7 @@ class Register extends React.Component{
             school: "",
             year: "",
             pronouns: "",
-            Interests: ""
+            interests: ""
         };
       }
     
@@ -31,17 +33,28 @@ class Register extends React.Component{
     }
 
     handleYearChange = e => {
-        this.setState({ age: e.target.value});
+        this.setState({ year: e.target.value});
     }
 
-    heandlePronounsChange = e => {
-        this.setState({ age: e.target.value});
+    handlePronounsChange = e => {
+        this.setState({ pronouns: e.target.value});
     }
 
     handleInterestsChange = e => {
-        this.setState({ age: e.target.value});
+        this.setState({ interests: e.target.value});
     }
+  submitForm = () => {
+    let db = firebase.firestore();
+    console.log(this.state);
+    db.collection("users-test").add(this.state)
+      .then(function (docRef) {
+        console.log("Document written with ID: ", docRef.id);
+      })
+      .catch(function (error) {
+        console.error("Error adding document: ", error);
+      });
 
+    }
     render() {
         return (
             <div>
@@ -67,7 +80,7 @@ class Register extends React.Component{
             <input
               type="number"
               value={this.state.year}
-              onChange={this.handleSchoolChange}
+              onChange={this.handleYearChange}
             />
             <p>Pronouns</p>
             <input
@@ -79,12 +92,12 @@ class Register extends React.Component{
             <input
               type="text"
               value={this.state.interests}
-              onChange={this.handlePronounsChange}
+              onChange={this.handleInterestsChange}
             />
             <br></br>
             <br></br>
             <button 
-            onClick={this.createMessage}
+            onClick={this.submitForm}
             >
                 Submit
             </button>
