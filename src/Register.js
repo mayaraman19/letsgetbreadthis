@@ -5,16 +5,59 @@ import {useEffect, useState} from 'react';
 import Person from './Person';
 
 
-function Register (){
-    return ( 
-        <form>
-        <h1>Hello</h1>
-        <p>Enter your name:</p>
-        <input
-          type="text"
-        />
-        </form>
-    );
+class Register extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            name: "",
+            school: "",
+            age: ""
+        };
+      }
+    
+    handleNameChange = e => {
+        this.setState({ name: e.target.value });
     }
-  
-  export default Register;
+    
+    handleSchoolChange = e => {
+        this.setState({ school: e.target.value });
+    }
+
+    handleAgeChange = e => {
+        this.setState({ age: e.target.value });
+    }
+
+    render() {
+        return (
+            <div>
+            <p>Name:</p>
+            <input 
+                type="text"
+                value={this.state.name} 
+                onChange={this.handleNameChange}
+            />
+            <p>School:</p>
+            <input 
+                type="text"
+                value={this.state.school} 
+                onChange={this.handleSchoolChange}
+            />
+            <p>Age:</p>
+            <input 
+                type="text"
+                value={this.state.age} 
+                onChange={this.handleAgeChange}
+            />
+            <br></br>
+            <br></br>
+            <button 
+            onClick={this.createMessage}
+            >
+                Submit
+            </button>
+            </div>
+        );
+    }
+}
+
+export default Register;
