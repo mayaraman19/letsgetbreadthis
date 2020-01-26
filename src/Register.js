@@ -5,7 +5,6 @@ import './App.css';
 import firebase from './lib/firebase';
 import {useEffect, useState} from 'react';
 import Person from './Person';
-import {Redirect} from 'react-router-dom'
 
 
 class Register extends React.Component{
@@ -17,8 +16,7 @@ class Register extends React.Component{
             school: "",
             year: "",
             pronouns: "",
-            interests: "",
-            toContacts: false
+            interests: ""
         };
       }
     
@@ -46,7 +44,7 @@ class Register extends React.Component{
     handleInterestsChange = e => {
         this.setState({ interests: e.target.value});
     }
-    submitForm = () => {
+  submitForm = () => {
     let db = firebase.firestore();
     console.log(this.state);
     db.collection("users-test").add(this.state)
@@ -56,46 +54,42 @@ class Register extends React.Component{
       .catch(function (error) {
         console.error("Error adding document: ", error);
       });
-      this.setState({toContacts: true});
-    }
 
+    }
     render() {
       const options = [
         'Freshman', 'Sophomore', 'Junior', 'Senior', 'Other'
       ];
       const defaultOption = options[0];
-      if (this.state.toContacts === true) {
-        return <Redirect to='/users' />
-      }
         return (
             <div>
-            <p>Name:</p>
+            <h3>Name:</h3>
             <input 
                 type="text"
                 value={this.state.name} 
                 onChange={this.handleNameChange}
             />
-            <p>Age:</p>
+            <h3>Age:</h3>
             <input 
                 type="number"
                 value={this.state.age} 
                 onChange={this.handleAgeChange}
             />
-            <p>School:</p>
+            <h3>School:</h3>
             <input 
                 type="text"
                 value={this.state.school} 
                 onChange={this.handleSchoolChange}
             />
-            <p>Year:</p>
+            <h3>Year:</h3>
             <Dropdown options={options} onChange={this.handleYearChange} value={this.state.year} placeholder="Select a year" />
-            <p>Pronouns</p>
+            <h3>Pronouns</h3>
             <input
               type="text"
               value={this.state.pronouns}
               onChange={this.handlePronounsChange}
             />
-            <p>Interests (3 at most please!)</p>
+            <h3>Interests (3 at most please!)</h3>
             <input
               type="text"
               value={this.state.interests}
