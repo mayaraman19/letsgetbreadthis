@@ -6,7 +6,7 @@ import Register from './Register';
 import App from './App';
 function Home() {
 
-    const [items, setItems] = useState([]);
+    /*const [items, setItems] = useState([]);
   
     //componentDidMount
     useEffect(() => {
@@ -34,8 +34,9 @@ function Home() {
       //   setItems([1,2,3]);
       // }, 1000)
     }, []);
-  
-    console.log(items);
+    
+    {items.map(item => <Person item={item}/>)}
+    console.log(items);*/
     return (
       <div className="App">
         <header className="App-header">
@@ -47,7 +48,7 @@ function Home() {
         <a href="/register">Register Today!</a>
         {/* <button onClick={() => }"./src/Register.js">Register today!</button> */}
         </header>
-        {items.map(item => <Person item={item}/>)}
+        
       </div>
     );
   }

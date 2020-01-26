@@ -5,6 +5,7 @@ import './App.css';
 import firebase from './lib/firebase';
 import {useEffect, useState} from 'react';
 import Person from './Person';
+import {Redirect} from 'react-router-dom'
 
 
 class Register extends React.Component{
@@ -16,7 +17,8 @@ class Register extends React.Component{
             school: "",
             year: "",
             pronouns: "",
-            interests: ""
+            interests: "",
+            toContact: false
         };
       }
     
@@ -54,13 +56,16 @@ class Register extends React.Component{
       .catch(function (error) {
         console.error("Error adding document: ", error);
       });
-
+      this.setState({toContact: true});
     }
     render() {
       const options = [
         'Freshman', 'Sophomore', 'Junior', 'Senior', 'Other'
       ];
       const defaultOption = options[0];
+      if (this.state.toContact=== true) {
+        return <Redirect to='/users' />
+      }
         return (
             <div>
             <h3>Name:</h3>
