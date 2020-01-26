@@ -10,8 +10,6 @@ function Person(props) {
     <div className="Person">
       <h1>{props.item.name}</h1>
       <h2>{props.item.school}</h2>
-      <h3>{props.blah}</h3>
-      <h3>{props.food}</h3>
       <h3>{props.item.age}</h3>
     </div>
   );

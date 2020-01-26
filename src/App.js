@@ -55,7 +55,7 @@ function App() {
         </a>
         <a className="button">Sign Up</a>
       </header>
-      {items.map(item => <Person item={item} blah="1" food="banana" age={item.age}/>)}
+      {items.map(item => <Person item={item}/>)}
     </div>
   );
 }
