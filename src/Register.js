@@ -4,7 +4,6 @@ import firebase from './lib/firebase';
 import {useEffect, useState} from 'react';
 import Person from './Person';
 
-
 class Register extends React.Component{
     constructor(props){
         super(props);
@@ -28,9 +27,6 @@ class Register extends React.Component{
     }
 
     render = () => {
-        if (this.state.toDashboard === true) {
-            return <Redirect to='/dashboard' />
-          }
         return (
             <div>
             <p>Name:</p>
