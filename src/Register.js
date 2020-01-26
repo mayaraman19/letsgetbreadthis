@@ -88,14 +88,14 @@ class Register extends React.Component{
                 onChange={this.handleSchoolChange}
             />
             <p>Year:</p>
-            <Dropdown options={options} onChange={this.handleYearChange} value={this.state.year} placeholder="Select an option" />
+            <Dropdown options={options} onChange={this.handleYearChange} value={this.state.year} placeholder="Select a year" />
             <p>Pronouns</p>
             <input
               type="text"
               value={this.state.pronouns}
               onChange={this.handlePronounsChange}
             />
-            <p>Interests</p>
+            <p>Interests (3 at most please!)</p>
             <input
               type="text"
               value={this.state.interests}
