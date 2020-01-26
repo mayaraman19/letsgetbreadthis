@@ -44,9 +44,7 @@ function App() {
       <br />
       <br />
       <br />
-      <button onclick="window.location.href = 'signup.html';">Sign up</button>
-      <br />
-      <button onclick="window.location.href = 'login.html';">Log in</button>
+      <button onclick="window.location.href = 'register.html';">Register today!</button>
       </header>
       {items.map(item => <Person item={item}/>)}
     </div>
