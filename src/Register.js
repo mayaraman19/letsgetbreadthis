@@ -6,7 +6,7 @@ import Person from './Person';
 
 
 class Register extends React.Component{
-    constructor(props) {
+    cconstructor(props) {
         super(props);
         this.state = { username: '' };
       }
