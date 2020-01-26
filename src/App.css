@@ -22,25 +22,26 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
 }
 
 .App-link {
   color: #61dafb;
 }
 
-.button {
-  padding: 40px;
-  background: yellow;
-}
 body {
   background-color: #ffc17a;
 }
-h1 {
+he {
   font-family: 'Teko', sans-serif;
   font-size: 70px;
   text-align: center;
   white-space: nowrap ;
   text-shadow: 3px -1px rgb(250, 242, 238);
+}
+.background-image{
+  background-image: url(https://images.vexels.com/media/users/3/151021/isolated/preview/0a0ba19818cba603cf83d35b5766e654-heart-hippie-doodle-by-vexels.png);
+  background-attachment: fixed;
 }
 .rainbow-text {
   background-image: linear-gradient(to left, rgb(175, 59, 230), 
