@@ -11,8 +11,7 @@ class Register extends React.Component{
         this.state = {
             name: "",
             school: "",
-            age: "",
-            toContacts = false
+            age: ""
         };
       }
 
