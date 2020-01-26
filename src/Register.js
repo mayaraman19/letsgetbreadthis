@@ -11,7 +11,7 @@ class Register extends React.Component{
         this.state = {
             name: "",
             school: "",
-            age: -1
+            age: ""
         };
       }
     
@@ -42,16 +42,18 @@ class Register extends React.Component{
                 value={this.state.school} 
                 onChange={this.handleSchoolChange}
             />
-            <Age>Age:</Age>
+            <p>Age:</p>
             <input 
-                type="number"
+                type="text"
                 value={this.state.age} 
                 onChange={this.handleAgeChange}
             />
+            <br></br>
+            <br></br>
             <button 
             onClick={this.createMessage}
             >
-                Send Message
+                Submit
             </button>
             </div>
         );
