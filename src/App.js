@@ -44,7 +44,8 @@ function App() {
       <br />
       <br />
       <br />
-      <button onclick="Register()">Register today!</button>
+      <a href="/register">Register Today!</a>
+      {/* <button onClick={() => }"./src/Register.js">Register today!</button> */}
       </header>
       {items.map(item => <Person item={item}/>)}
     </div>
