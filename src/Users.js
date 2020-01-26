@@ -1,7 +1,6 @@
 import React from 'react';
-import firestore from "./Firestore";
 
-class User extends React.Component {
+class Users extends React.Component {
   render() {
     return (
         <form>
@@ -20,4 +19,4 @@ class User extends React.Component {
         );
       }
    }
-export default User;
+export default Users;
