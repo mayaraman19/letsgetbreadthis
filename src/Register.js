@@ -5,17 +5,16 @@ import {useEffect, useState} from 'react';
 import Person from './Person';
 
 
-function Register() {
-    
-    
+class Register extends React.Component{
     return (
-        <div className = "Register">
-            <form>
-            First name:<br />
-            <input type="text" name="firstname"><br />
-            Last name:<br />
-            <input type="text" name="lastname">
-            </form>
-        </div>
+        <form>
+        <h1>Hello</h1>
+        <p>Enter your name:</p>
+        <input
+          type="text"
+        />
+      </form>
     );
 }
+
+export default Register;

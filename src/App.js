@@ -44,7 +44,7 @@ function App() {
       <br />
       <br />
       <br />
-      <button onclick="window.location.href = 'register.js';">Register today!</button>
+      <button onclick="window.location.href = 'Register.js';">Register today!</button>
       </header>
       {items.map(item => <Person item={item}/>)}
     </div>
