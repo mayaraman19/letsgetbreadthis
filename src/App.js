@@ -2,54 +2,51 @@ import React from 'react';
 import firebase from './lib/firebase';
 import {useEffect, useState} from 'react';
 import Person from './Person';
+import Register from './Register';
 import './App.css';
+import Home from './Home';
+import Users from  './Users';
 
-function App() {
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-  const [items, setItems] = useState([]);
-
-  //componentDidMount
-  useEffect(() => {
-    //call these once when app loads from here
-    const db = firebase.firestore();
-    db.collection("users-test").get().then(items => {
-      console.log(items);
-      const itemDocs = items.docs;
-      // let i;
-      // for(i = 0; i < itemDocs.length; i++) {
-      //   data[i] = console.log(itemDocs[i].data());
-      // }
-      const data = itemDocs.map(doc => doc.data());
-      setItems(data);
-    console.log(data); // array of cities objects
-    })
-    //until here
-  }, [])
-
-
-  useEffect(() => {
-    //this will execue every time the app loads
-    // alert("Hello");
-    // setTimeout(() => {
-    //   setItems([1,2,3]);
-    // }, 1000)
-  }, []);
-
-  console.log(items);
+export default function Function() {
   return (
-    <div className="App">
-      <header className="App-header">
-      <div class="background-image"></div>
-      <he class="rainbow-text">[L]et's [G]et [B]read [T]his</he>
-      <br />
-      <br />
-      <br />
-      <a href="/register">Register Today!</a>
-      {/* <button onClick={() => }"./src/Register.js">Register today!</button> */}
-      </header>
-      {items.map(item => <Person item={item}/>)}
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/home">Home</Link>
+            </li>
+            <li>
+              <Link to="/register">Register</Link>
+            </li>
+            <li>
+              <Link to="/users">Users</Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
-export default App;
