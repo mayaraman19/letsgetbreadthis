@@ -5,6 +5,7 @@ import {useEffect, useState} from 'react';
 import Person from './Person';
 
 
+<<<<<<< HEAD
 class Register extends React.Component{
     cconstructor(props) {
         super(props);
@@ -28,3 +29,18 @@ class Register extends React.Component{
 }
 
 export default Register;
+=======
+function Register (){
+    return ( 
+        <form>
+        <h1>Hello</h1>
+        <p>Enter your name:</p>
+        <input
+          type="text"
+        />
+        </form>
+    );
+    }
+  
+  export default Register;
+>>>>>>> 866b35b4980ab5359247e0f765ef839585e13ebe
