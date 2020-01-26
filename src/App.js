@@ -48,7 +48,7 @@ function App() {
       <br />
       <button onclick="window.location.href = 'login.html';">Log in</button>
       </header>
-      {items.map(item => <Person item={item} blah="1" food="banana" age={item.age}/>)}
+      {items.map(item => <Person item={item}/>)}
     </div>
   );
 }
